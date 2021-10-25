@@ -11,17 +11,24 @@
     "@babel/core": "^7.15.8",
     "@babel/plugin-transform-runtime": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
+    "@rollup/plugin-alias": "^3.1.8",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "autoprefixer": "^10.3.7",
     "babel-plugin-component": "^1.1.1",
+    "babel-plugin-import": "^1.13.3",
+    "cssnano": "^5.0.8",
     "postcss": "^8.3.11",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^6.7.0",
     "rollup": "^2.58.1",
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-vue2": "^0.8.1"
+    "rollup-plugin-vue2": "^0.8.1",
+    "sass": "^1.43.3"
   },
   "scripts": {
     "build": "NODE_ENV=production rollup -c"

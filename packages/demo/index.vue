@@ -1,15 +1,18 @@
 <template>
+  <div class="test-box">
     <el-button>测试</el-button>
+  </div>
 </template>
 
- <script>
-import { Button } from "element-ui";
+<script>
 export default {
-  components: {
-    "el-button": Button,
+  data: () => {
   },
-  data: () => {},
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.test-box {
+  background: red;
+}
+</style>
