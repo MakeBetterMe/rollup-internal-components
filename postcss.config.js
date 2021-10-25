@@ -1,5 +1,4 @@
 const packageJson = require("./package.json")
-console.log("22222222222222222222222222222222222222222222222222222222222222222")
 module.exports = {
   plugins: {
     // https://preset-env.cssdb.org/

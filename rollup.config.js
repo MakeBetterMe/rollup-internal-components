@@ -7,7 +7,7 @@ import {terser} from 'rollup-plugin-terser'
 import {nodeResolve} from '@rollup/plugin-node-resolve'
 import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
-import aliasPlugin from  '@rollup/plugin-alias'
+import aliasPlugin from '@rollup/plugin-alias'
 // import {DEFAULT_EXTENSIONS} from '@babel/core'
 
 const isDev = process.env.NODE_ENV !== 'production'
@@ -25,30 +25,14 @@ const getPlugins = () => {
     commonjs(),
     aliasPlugin({
       entries: [
-        { find: 'utils', replacement: __dirname + '/utils' },
+        {find: 'utils', replacement: path.resolve(__dirname, 'utils')},
       ]
-      // '@': path.resolve(process.cwd(), './src'),
-      // views: path.resolve(process.cwd(), './packages'),
-      // styles: path.resolve(process.cwd(), './src/styles'),
     }),
     json(),
     vue(),
     postcss(),
-    // postcss({
-    //     plugins: [require('autoprefixer')],
-    //     // 把 css 插入到 style 中
-    //     inject: true,
-    //     // 把 css 放到和js同一目录
-    //     // extract: true
-    //     // Minimize CSS, boolean or options for cssnano.
-    //     minimize: !isDev,
-    //     // Enable sourceMap.
-    //     sourceMap: isDev,
-    //     // This plugin will process files ending with these extensions and the extensions supported by custom loaders.
-    //     extensions: ['.sass', '.less', '.scss', '.css']
-    // }),
     babel({
-      exclude: 'node_modules/**',
+      // exclude: 'node_modules/**',
       // babelHelpers: 'runtime',
       // babel 默认不支持 ts 需要手动添加
       // extensions: [...DEFAULT_EXTENSIONS, '.ts', '.tsx', '.vue']
@@ -68,21 +52,16 @@ module.exports = fs
     return {
       input: path.resolve(root, item, 'index.js'),
       output: [
-        // {
-        //     name: 'index',
-        //     file: path.resolve(root, item, pkg.main),
-        //     format: 'umd',
-        //     sourcemap: isDev,
-        //     globals: {
-        //         vue: 'vue',
-        //         'element-plus': 'element-plus'
-        //     }
-        // },
         {
           dir: outputDirPath,
           // chunkFileNames: "[name]-[hash].chunk.js",
           entryFileNames: "[name]-[format].js",
-          format: "es",
+          format: "esm",
+          sourcemap: false,
+          globals: {
+            vue: 'vue',
+            'element-ui': 'element-ui'
+          }
         }
       ],
       // onwarn: function (warning) {

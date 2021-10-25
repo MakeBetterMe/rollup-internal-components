@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import '../common.js'
 export default {
   data: () => {
   },

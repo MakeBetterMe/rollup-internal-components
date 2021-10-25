@@ -1,5 +1,5 @@
 {
-  "name": "rollup-internal-components",
+  "name": "saas2-fe-cdpv2-component-vue",
   "version": "1.0.0",
   "description": "基于element-ui打造的业务组件库模板",
   "main": "postcss.config.js",

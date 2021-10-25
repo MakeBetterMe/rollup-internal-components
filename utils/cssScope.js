@@ -7,7 +7,7 @@ export default function cssScope(component) {
     },
     render: function (h) {
       return h('div', {
-        class: packageJson.name + 'xxxxxxxxxxxxxxxx',
+        class: packageJson.name,
       }, [h('child-component', {props: {...this.$attrs}})])
     }
   }
