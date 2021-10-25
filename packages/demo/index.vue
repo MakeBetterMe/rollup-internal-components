@@ -2,7 +2,7 @@
     <el-button>测试</el-button>
 </template>
 
-<script>
+ <script>
 import { Button } from "element-ui";
 export default {
   components: {

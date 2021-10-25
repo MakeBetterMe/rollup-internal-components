@@ -1,12 +1,14 @@
 module.exports = {
-  presets: [["es2015", { modules: false }]],
+  presets: [ '@babel/preset-env'],
   plugins: [
     [
       "component",
       {
-        libraryName: "element-ui",
-        styleLibraryName: "theme-chalk",
-      },
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk",
+        "style":true
+      }
     ],
+    '@babel/plugin-transform-runtime'
   ],
 };
