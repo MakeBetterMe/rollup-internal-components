@@ -5,17 +5,17 @@ module.exports = {
       useBuiltIns: false
     }]
   ],
-  plugins: [
-    [
-      "component",
-      {
-        "libraryName": "element-ui",
-        "styleLibraryName": "theme-chalk",
-        "style": true
-      }
-    ],
-    ['@babel/plugin-transform-runtime', {
-      "useESModules": true,
-    }]
-  ],
+  // plugins: [
+  //   [
+  //     "component",
+  //     {
+  //       "libraryName": "element-ui",
+  //       "styleLibraryName": "theme-chalk",
+  //       "style": true
+  //     }
+  //   ],
+  //   ['@babel/plugin-transform-runtime', {
+  //     "useESModules": true,
+  //   }]
+  // ],
 };

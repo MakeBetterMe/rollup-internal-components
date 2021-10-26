@@ -2,12 +2,14 @@ import fs from 'fs'
 import path from 'path'
 import json from '@rollup/plugin-json'
 import postcss from 'rollup-plugin-postcss'
-import vue from 'rollup-plugin-vue2'
+import vue from 'rollup-plugin-vue'
 import {terser} from 'rollup-plugin-terser'
 import {nodeResolve} from '@rollup/plugin-node-resolve'
 import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import aliasPlugin from '@rollup/plugin-alias'
+import Components from 'unplugin-vue-components/rollup'
+import {ElementUiResolver} from 'unplugin-vue-components/resolvers'
 // import {DEFAULT_EXTENSIONS} from '@babel/core'
 
 const isDev = process.env.NODE_ENV !== 'production'
@@ -31,6 +33,13 @@ const getPlugins = () => {
     json(),
     vue(),
     postcss(),
+    Components(
+      {
+        resolvers: [ElementUiResolver({
+          importStyle: 'css'
+        })],
+      }
+    ),
     babel({
       // exclude: 'node_modules/**',
       // babelHelpers: 'runtime',

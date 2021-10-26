@@ -6,10 +6,10 @@
 
 <script>
 import '../common.js'
-// import { Button } from "element-ui";
+import { Button } from "element-ui";
 export default {
   components:{
-    // 'el-button':Button,
+    'el-button':Button,
   },
   data: () => {
   },

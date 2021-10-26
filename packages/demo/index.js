@@ -1,7 +1,5 @@
 import Demo from './index.vue'
-
-export default Demo
-// import cssScope from "utils/cssScope";
+import cssScope from "utils/cssScope";
 
 
-// export default cssScope(Demo)
+export default cssScope(Demo)
