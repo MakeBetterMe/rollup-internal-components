@@ -6,7 +6,11 @@
 
 <script>
 import '../common.js'
+// import { Button } from "element-ui";
 export default {
+  components:{
+    // 'el-button':Button,
+  },
   data: () => {
   },
 };
